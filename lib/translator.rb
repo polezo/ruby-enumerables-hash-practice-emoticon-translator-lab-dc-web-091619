@@ -17,9 +17,9 @@ end
 def get_japanese_emoticon (file_path,emoticon)
  dictionary = load_library(file_path)
   answer = "Sorry, that emoticon was not found"
-  dictionary[:get_emoticon].each do |key,value|
-  if emoticon == key
-    answer = value
+  dictionary[:get_emoticon].each do |memo,value|
+  if emoticon == memo
+    answer = memo[1]
     end 
   end
   answer
